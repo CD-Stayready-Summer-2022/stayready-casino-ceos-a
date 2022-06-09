@@ -1,6 +1,7 @@
 package com.stayready;
 
 public class Player {
+
     private String name;
     private int age;
     private double money;
@@ -40,6 +41,7 @@ public class Player {
     public void setMoney(double money){
         this.money=money;
     }
+
 
 
 }
