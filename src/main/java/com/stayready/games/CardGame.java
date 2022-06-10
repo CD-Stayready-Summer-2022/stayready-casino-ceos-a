@@ -11,5 +11,7 @@ public abstract class CardGame {
         this.dealer = dealer;
     }
 
+    public abstract void startGame();
+
 
 }
