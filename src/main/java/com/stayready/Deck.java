@@ -25,9 +25,7 @@ public class Deck {
         }
     }
 
-    public Card deal(Integer numberOfCards){
-        return cards.remove(0);
-    }
+
 
     public Integer cardsRemaining(){
         return cards.size();
