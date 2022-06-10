@@ -1,5 +1,11 @@
 package com.stayready.games;
 
-public class GoFish extends CardGame{
+
+import com.stayready.Player;
+
+public class GoFish extends CardGame {
+    public GoFish(Player player, Player dealer) {
+        super(player, dealer);
+    }
 
 }
