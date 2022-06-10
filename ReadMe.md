@@ -2,11 +2,13 @@
 * Objective:
     * To create a casino simulation.
 
+
 ## Minimum Viable Product (MVP)
 * Your application must have at the very least 3 games:
     * Go Fish a card game
     * BlackJack a card game
     * Craps a dice game
+
 
 ## Specs
 * The project should include some concept of
