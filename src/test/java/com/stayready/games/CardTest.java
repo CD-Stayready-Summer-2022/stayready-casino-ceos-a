@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 
 public class CardTest {
 
+
     @Test
     @DisplayName("Card Constructor Test")
     public void constructorTest(){
