@@ -1,6 +1,9 @@
 package com.stayready;
 
-import com.stayready.games.Card;
+
+import com.stayready.games.cards.card.Card;
+import com.stayready.games.cards.card.CardSuit;
+import com.stayready.games.cards.card.CardValue;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -23,7 +26,7 @@ public class Deck {
     }
 
     public Card deal(Integer numberOfCards){
-        return null;
+        return cards.remove(0);
     }
 
     public Integer cardsRemaining(){
