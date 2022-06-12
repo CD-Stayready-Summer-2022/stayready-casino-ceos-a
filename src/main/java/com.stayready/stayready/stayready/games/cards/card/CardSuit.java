@@ -1,4 +1,4 @@
-package com.stayready.stayready.games.cards.card;
+package com.stayready.stayready.stayready.games.cards.card;
 
 public enum CardSuit {
     CLUB("Club"), SPADE("Spade"), HEART("Heart"), DIAMOND("Diamond");
