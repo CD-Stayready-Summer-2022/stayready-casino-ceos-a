@@ -1,8 +1,7 @@
 package com.stayready.games;
 
-import com.stayready.Deck;
+import com.stayready.games.deck.Deck;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class DeckTest {

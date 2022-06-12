@@ -1,6 +1,8 @@
 package com.stayready.games;
 
-import com.stayready.Deck;
+
+import com.stayready.games.deck.Deck;
+
 
 public class Hand {
     private CardGame[] player;

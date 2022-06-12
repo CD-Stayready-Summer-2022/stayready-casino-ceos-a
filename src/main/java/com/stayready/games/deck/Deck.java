@@ -1,7 +1,13 @@
-package com.stayready;
+package com.stayready.games.deck;
+
+
 
 
 import com.stayready.games.CardGame;
+
+
+
+
 
 import com.stayready.games.cards.card.Card;
 import com.stayready.games.cards.card.CardSuit;
@@ -27,22 +33,33 @@ public class Deck {
         }
     }
 
-    public Card deal(Integer numberOfCards) {
 
-        return cards.get(0);
-       
+
+
+    public CardGame deal(Integer numberOfCards) {
+
+        return null;
+
 
 
     }
 
 
-    public Integer cardsRemaining() {
-        return cards.size();
-    }
 
-    public void shuffle() {
-        Collections.shuffle(cards);
-    }
+        public Card takeCardFromDeck () {
+            Card card = cards.get(0);
+            cards.remove(0);
+            return card;
+        }
+
+        public Integer cardsRemaining () {
+            return cards.size();
+        }
+
+        public void shuffle () {
+            Collections.shuffle(cards);
+        }
 
 
 }
+
