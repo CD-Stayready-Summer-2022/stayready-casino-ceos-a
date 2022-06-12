@@ -1,12 +1,9 @@
-package com.stayready.games;
+package com.stayready.games.cards;
 
 import com.stayready.Player;
-import com.stayready.games.cards.card.Card;
-import com.stayready.games.cards.card.CardGame;
-import com.stayready.games.cards.card.CardValue;
-import com.stayready.games.cards.card.card.CardPlayer;
-import com.stayready.games.cards.card.card.Hand;
+import com.stayready.games.cards.card.*;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GoFish extends CardGame {
