@@ -1,9 +1,9 @@
-package com.stayready.stayready.stayready.games.cards.deck;
+package com.stayready.stayready.games.cards.deck;
 
 
-import com.stayready.stayready.stayready.games.cards.card.Card;
-import com.stayready.stayready.stayready.games.cards.card.CardSuit;
-import com.stayready.stayready.stayready.games.cards.card.CardValue;
+import com.stayready.stayready.games.cards.card.Card;
+import com.stayready.stayready.games.cards.card.CardValue;
+import com.stayready.stayready.games.cards.card.CardSuit;
 
 import java.util.ArrayList;
 import java.util.Collections;

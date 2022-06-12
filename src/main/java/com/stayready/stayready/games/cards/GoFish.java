@@ -1,5 +1,6 @@
-package com.stayready.stayready.stayready.games.cards;
+package com.stayready.stayready.games.cards;
 
+import com.stayready.stayready.games.cards.card.*;
 import com.stayready.stayready.stayready.games.cards.card.*;
 
 import java.util.Scanner;

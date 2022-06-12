@@ -1,7 +1,7 @@
-package com.stayready.stayready.stayready.games.cards.card;
+package com.stayready.stayready.games.cards.card;
 
 
-import com.stayready.stayready.stayready.Player;
+import com.stayready.stayready.Player;
 
 public class CardPlayer extends Player {
     private Hand hand;
