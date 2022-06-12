@@ -1,7 +1,8 @@
-package com.stayready.stayready;
+package com.stayready.stayready.games.cards;
 
 
-import com.stayready.stayready.games.cards.GoFish;
+
+import com.stayready.stayready.games.cards.card.CardPlayer;
 
 import java.util.Scanner;
 

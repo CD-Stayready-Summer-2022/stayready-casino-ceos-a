@@ -1,5 +1,4 @@
 package com.stayready.stayready.games.cards.card;
-
 import com.stayready.stayready.games.cards.Game;
 import com.stayready.stayready.games.cards.deck.Deck;
 
