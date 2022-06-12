@@ -2,6 +2,7 @@ package com.stayready.games;
 
 import com.stayready.Deck;
 
+
 public class Hand {
     private CardGame[] player;
     private CardGame[] dealer;
