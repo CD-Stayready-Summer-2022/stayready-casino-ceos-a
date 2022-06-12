@@ -1,10 +1,8 @@
 package com.stayready;
 
-<<<<<<< HEAD
-import com.stayready.games.CardGame;
-=======
 
->>>>>>> 12ebc86a7fdd98325afe30d0a87ff5f1b7ec601b
+import com.stayready.games.CardGame;
+
 import com.stayready.games.cards.card.Card;
 import com.stayready.games.cards.card.CardSuit;
 import com.stayready.games.cards.card.CardValue;
@@ -29,17 +27,14 @@ public class Deck {
         }
     }
 
-<<<<<<< HEAD
-    public CardGame deal(Integer numberOfCards) {
+    public Card deal(Integer numberOfCards) {
 
-        return null;
+        return cards.get(0);
        
 
 
     }
-=======
 
->>>>>>> 12ebc86a7fdd98325afe30d0a87ff5f1b7ec601b
 
     public Integer cardsRemaining() {
         return cards.size();
