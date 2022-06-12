@@ -1,4 +1,4 @@
-package com.stayready;
+package com.stayready.stayready;
 
 import java.util.Objects;
 

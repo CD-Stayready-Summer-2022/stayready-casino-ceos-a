@@ -1,4 +1,4 @@
-package com.stayready;
+package com.stayready.stayready;
 
 import com.stayready.games.cards.GoFish;
 import com.stayready.games.cards.card.Card;

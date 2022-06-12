@@ -1,4 +1,4 @@
-package com.stayready.games.cards.card;
+package com.stayready.stayready.games.cards.card;
 
 import java.util.ArrayList;
 

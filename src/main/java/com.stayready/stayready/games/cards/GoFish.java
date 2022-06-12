@@ -1,14 +1,9 @@
-package com.stayready.games;
+package com.stayready.stayready.games.cards;
 
+import com.stayready.stayready.Player;
+import com.stayready.games.cards.card.*;
 
-
-import com.stayready.Player;
-import com.stayready.games.cards.card.Card;
-import com.stayready.games.cards.card.CardGame;
-import com.stayready.games.cards.card.CardValue;
-import com.stayready.games.cards.card.card.CardPlayer;
-import com.stayready.games.cards.card.card.Hand;
-
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GoFish extends CardGame {
@@ -21,12 +16,10 @@ public class GoFish extends CardGame {
         this.player1 = player1;
         this.player2 = player2;
         this.scanner = new Scanner(System.in);
-
     }
 
     @Override
     public void startGame() {
-
         boolean gameOver = false;
         deal();
         while(!gameOver){
