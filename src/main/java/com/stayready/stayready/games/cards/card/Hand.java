@@ -14,6 +14,7 @@ public class Hand {
     }
 
     public Boolean valueOfCardInHand(){
+
         return null;
     }
 
@@ -23,6 +24,7 @@ public class Hand {
 
     public boolean cardIsInHand(Card card){
         return cards.contains(card);
+
     }
 
     public Card getCardFromHand(Card card){
