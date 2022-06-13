@@ -20,19 +20,20 @@ public class GoFish extends CardGame {
     public void startGame() {
         boolean gameOver = false;
         deal();
-        while(!gameOver){
+        while (!gameOver) {
             promptUserToPlay(player1);
+
             //promptUserToPlay(player2);
             gameOver = true;
         }
     }
 
-    public void promptUserToPlay(CardPlayer player){
-        String msg = String.format("Hey, %s what card suit are you looking for?", player.getName());
+    public void promptUserToPlay(CardPlayer player) {
+        String msg = String.format("Hey, %s what card number are you looking for?", player.getName());
         System.out.println(msg);
         int x = 0;
         String msg2 = "";
-        for (CardValue value: CardValue.values()) {
+        for (CardValue value : CardValue.values()) {
             msg2 = String.format("Press %d for %s", x, value.name);
             System.out.println(msg2);
             x++;
@@ -40,13 +41,23 @@ public class GoFish extends CardGame {
         Integer input1 = scanner.nextInt();
         CardValue value1 = CardValue.values()[input1];
         System.out.println("You selected " + value1.name);
-        Hand hand = (player1.equals(player))? player2.getHand() : player1.getHand();
+        Hand hand = (player1.equals(player)) ? player2.getHand() : player1.getHand();
+
+        if (hand.valueOfCardInHand(value1)) {
+
+
+
+        } else {
+            System.out.println("Go fish");
+            hand.giveCardToHand(deck.takeCardFromDeck());
+        }
+
 
     }
 
 
-    public void deal(){
-        for(int x =0 ; x < NUMBER_TO_DEAL; x++){
+    public void deal() {
+        for (int x = 0; x < NUMBER_TO_DEAL; x++) {
             Card card1 = deck.takeCardFromDeck();
             player1.getHand().giveCardToHand(card1);
 
@@ -62,4 +73,5 @@ public class GoFish extends CardGame {
     public CardPlayer getPlayer2() {
         return player2;
     }
+
 }
