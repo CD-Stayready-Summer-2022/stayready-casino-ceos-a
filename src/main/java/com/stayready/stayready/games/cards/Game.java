@@ -1,4 +1,4 @@
-package com.stayready.games;
+package com.stayready.stayready.games.cards;
 
 public interface Game {
 

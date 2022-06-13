@@ -1,4 +1,4 @@
-package com.stayready.games.cards.card;
+package com.stayready.stayready.games.cards.card;
 
 import java.util.ArrayList;
 
@@ -14,6 +14,7 @@ public class Hand {
     }
 
     public Boolean valueOfCardInHand(){
+
         return null;
     }
 
@@ -23,6 +24,7 @@ public class Hand {
 
     public boolean cardIsInHand(Card card){
         return cards.contains(card);
+
     }
 
     public Card getCardFromHand(Card card){

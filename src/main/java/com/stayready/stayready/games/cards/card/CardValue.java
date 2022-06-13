@@ -1,4 +1,4 @@
-package com.stayready.games.cards.card;
+package com.stayready.stayready.games.cards.card;
 
 public enum CardValue {
     TWO(2, "Two"),THREE(3, "Three"),FOUR(4, "Four"),

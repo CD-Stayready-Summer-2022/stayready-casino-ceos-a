@@ -1,7 +1,6 @@
-package com.stayready.games.cards.card.card;
-
-import com.stayready.games.Game;
-import com.stayready.games.deck.Deck;
+package com.stayready.stayready.games.cards.card;
+import com.stayready.stayready.games.cards.Game;
+import com.stayready.stayready.games.cards.deck.Deck;
 
 public abstract class CardGame implements Game {
     protected Deck deck;

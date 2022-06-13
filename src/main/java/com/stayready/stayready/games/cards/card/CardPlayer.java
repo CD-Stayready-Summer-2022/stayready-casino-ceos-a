@@ -1,8 +1,7 @@
-package com.stayready.games.cards.card;
+package com.stayready.stayready.games.cards.card;
 
-import com.stayready.Player;
 
-import java.util.Objects;
+import com.stayready.stayready.Player;
 
 public class CardPlayer extends Player {
     private Hand hand;
