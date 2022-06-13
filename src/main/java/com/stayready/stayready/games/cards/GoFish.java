@@ -46,7 +46,6 @@ public class GoFish extends CardGame {
         if (hand.valueOfCardInHand(value1)) {
 
 
-
         } else {
             System.out.println("Go fish");
             hand.giveCardToHand(deck.takeCardFromDeck());

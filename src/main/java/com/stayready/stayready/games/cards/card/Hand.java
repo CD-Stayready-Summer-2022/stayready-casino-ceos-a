@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Hand {
     private ArrayList<Card> cards;
 
-    public Hand(){
+    public Hand() {
         this.cards = new ArrayList<>();
     }
 
@@ -13,38 +13,44 @@ public class Hand {
         return cards;
     }
 
-    public Boolean valueOfCardInHand(CardValue value){
+    public Boolean valueOfCardInHand(CardValue value) {
 
-        for(Card card:cards){
-            if(card.getValue().equals(value)){
+        for (Card card : cards) {
+            if (card.getValue().equals(value)) {
                 return true;
             }
         }
         return false;
     }
-    public ArrayList<Card> getMatches(CardValue value ) {
+
+    public ArrayList<Card> getMatches(CardValue value) {
         ArrayList<Card> matches = new ArrayList<>();
-        for(Card card:cards){
-            if(card.getValue().equals(value)){
+        for (Card card : cards) {
+            if (card.getValue().equals(value)) {
+                cards.remove(card);
                 matches.add(card);
             }
         }
         return matches;
     }
-    public void hasMatchingSet() {
+
+    public void hasMatchingSet(CardValue value) {
 
     }
+    public void giveCardsToHand(ArrayList<Card> cards) {
+        this.cards.addAll(cards);
+    }
 
-    public void giveCardToHand(Card card){
+    public void giveCardToHand(Card card) {
         cards.add(card);
     }
 
-    public boolean cardIsInHand(Card card){
+    public boolean cardIsInHand(Card card) {
         return cards.contains(card);
 
     }
 
-    public Card getCardFromHand(Card card){
+    public Card getCardFromHand(Card card) {
         int indexOfCard = cards.indexOf(card);
         Card cardRemoved = cards.get(indexOfCard);
         cards.remove(indexOfCard);
