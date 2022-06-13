@@ -25,19 +25,34 @@ public class Hand {
     public ArrayList<Card> getMatches(CardValue value ) {
         ArrayList<Card> matches = new ArrayList<>();
         for(Card card:cards){
-            if(card.getValue().equals(value)){
+            if(card.getValue().name.equals(value.name)){
                 matches.add(card);
             }
         }
         return matches;
     }
-    public void hasMatchingSet() {
+    public Boolean hasMatchingSet() {
+        for(CardValue value : CardValue.values()){
+            int count = 0;
+            for(Card card : cards){
+                if(card.getValue().name.equals(value.name)){
+                    count++;
+                }
+            }
+            if(count == 4){
+                return true;
+            }
+
+        }
+        return false;
 
 
     }
 
-    public void giveCardToHand(Card card){
-        cards.add(card);
+    public void giveCardToHand(Card cards){
+
+
+
     }
 
     public boolean cardIsInHand(Card card){
@@ -45,7 +60,7 @@ public class Hand {
 
     }
 
-    public Card getCardFromHand(Card card){
+    public Card getCardFromHand(ArrayList<Card> card){
         int indexOfCard = cards.indexOf(card);
         Card cardRemoved = cards.get(indexOfCard);
         cards.remove(indexOfCard);

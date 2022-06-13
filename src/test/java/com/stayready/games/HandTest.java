@@ -41,8 +41,8 @@ public class HandTest {
     public void getCardFromHandTest(){
         Hand hand=new Hand();
         Card card=new Card(CardValue.TWO, CardSuit.SPADE);
-        hand.giveCardToHand(card);
-        hand.getCardFromHand(card);
+        /*hand.giveCardToHand(1);
+        hand.getCardFromHand(h);*/
         Integer expected=0;
         Integer actual=hand.getSize();
         Assertions.assertEquals(expected, actual);
