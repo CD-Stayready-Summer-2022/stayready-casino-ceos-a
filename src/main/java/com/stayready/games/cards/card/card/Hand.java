@@ -15,8 +15,15 @@ public class Hand {
         return cards;
     }
 
-    public Boolean valueOfCardInHand(){
-        return null;
+    public boolean valueOfCardInHand(CardValue value){
+        for(Card card : cards){
+            if(card.getValue().equals(value)){
+                return true;
+
+            }
+
+        }
+        return false;
     }
 
     public void giveCardToHand(com.stayready.games.cards.card.Card card){
