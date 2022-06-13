@@ -1,9 +1,7 @@
 package com.stayready.stayready.games.cards;
 
-import com.stayready.stayready.Player;
-import com.stayready.games.cards.card.*;
+import com.stayready.stayready.games.cards.card.*;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GoFish extends CardGame {
@@ -29,7 +27,7 @@ public class GoFish extends CardGame {
         }
     }
 
-    public void promptUserToPlay(Player player){
+    public void promptUserToPlay(CardPlayer player){
         String msg = String.format("Hey, %s what card suit are you looking for?", player.getName());
         System.out.println(msg);
         int x = 0;
