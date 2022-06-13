@@ -22,6 +22,18 @@ public class Hand {
         }
         return false;
     }
+    public ArrayList<Card> getMatches(CardValue value ) {
+        ArrayList<Card> matches = new ArrayList<>();
+        for(Card card:cards){
+            if(card.getValue().equals(value)){
+                matches.add(card);
+            }
+        }
+        return matches;
+    }
+    public void hasMatchingSet() {
+
+    }
 
     public void giveCardToHand(Card card){
         cards.add(card);
