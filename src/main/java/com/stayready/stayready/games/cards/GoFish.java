@@ -42,15 +42,16 @@ public class GoFish extends CardGame {
         CardValue value1 = CardValue.values()[input1];
         System.out.println("You selected " + value1.name);
         Hand hand = (player1.equals(player)) ? player2.getHand() : player1.getHand();
-        /*
-        if () {
 
+        if (hand.valueOfCardInHand(value1)) {
+         //  player1.getHand().giveCardToHand(hand.getCardFromHand());
+            System.out.println("yes i have the card");
 
         } else {
             System.out.println("Go fish");
             hand.giveCardToHand(deck.takeCardFromDeck());
         }
-      */
+
 
     }
 
@@ -72,4 +73,5 @@ public class GoFish extends CardGame {
     public CardPlayer getPlayer2() {
         return player2;
     }
+
 }
