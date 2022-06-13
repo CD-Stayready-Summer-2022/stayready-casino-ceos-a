@@ -38,4 +38,8 @@ public class Hand {
         cards.remove(indexOfCard);
         return cardRemoved;
     }
+    public Integer getSize(){
+        cards.size();
+       return cards.size();
+    }
 }
