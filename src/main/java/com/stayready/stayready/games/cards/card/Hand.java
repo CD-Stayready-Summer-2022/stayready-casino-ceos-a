@@ -13,9 +13,14 @@ public class Hand {
         return cards;
     }
 
-    public Boolean valueOfCardInHand(){
+    public Boolean valueOfCardInHand(CardValue value){
 
-        return null;
+        for(Card card:cards){
+            if(card.getValue().equals(value)){
+                return true;
+            }
+        }
+        return false;
     }
 
     public void giveCardToHand(Card card){
