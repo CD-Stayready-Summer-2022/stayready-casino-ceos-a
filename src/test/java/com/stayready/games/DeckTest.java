@@ -1,6 +1,5 @@
 package com.stayready.games;
 
-
 import com.stayready.stayready.games.cards.deck.Deck;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

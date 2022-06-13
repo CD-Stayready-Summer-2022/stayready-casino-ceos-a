@@ -36,6 +36,7 @@ public class Hand {
 
     public void hasMatchingSet(CardValue value) {
 
+
     }
     public void giveCardsToHand(ArrayList<Card> cards) {
         this.cards.addAll(cards);
@@ -55,5 +56,9 @@ public class Hand {
         Card cardRemoved = cards.get(indexOfCard);
         cards.remove(indexOfCard);
         return cardRemoved;
+    }
+    public Integer getSize(){
+        cards.size();
+       return cards.size();
     }
 }
