@@ -2,6 +2,7 @@ package com.stayready.stayready.games.cards;
 
 import com.stayready.stayready.games.cards.card.*;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GoFish extends CardGame {
@@ -24,6 +25,7 @@ public class GoFish extends CardGame {
             promptUserToPlay(player1);
 
             //promptUserToPlay(player2);
+
             gameOver = true;
         }
     }
@@ -42,10 +44,16 @@ public class GoFish extends CardGame {
         CardValue value1 = CardValue.values()[input1];
         System.out.println("You selected " + value1.name);
         Hand hand = (player1.equals(player)) ? player2.getHand() : player1.getHand();
+        Hand hand2 = (player2.equals(player)) ? player2.getHand() : player1.getHand();
 
         if (hand.valueOfCardInHand(value1)) {
-            hand.getSize();
-            hand.giveCardsToHand(hand.getMatches(value1));
+
+            System.out.println("---------");
+            ArrayList<Card> matches = hand.getMatches(value1);
+            hand2.giveCardsToHand(matches);
+            System.out.println(hand.getSize());
+
+
         } else {
             System.out.println("Go fish");
             hand.giveCardToHand(deck.takeCardFromDeck());
