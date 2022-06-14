@@ -2,6 +2,7 @@ package com.stayready.stayready.games.cards;
 
 import com.stayready.stayready.games.cards.card.*;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GoFish extends CardGame {
@@ -22,11 +23,18 @@ public class GoFish extends CardGame {
         deal();
         while (!gameOver) {
             promptUserToPlay(player1);
+            promptUserToPlay(player2);
+            if (deck.cardsRemaining() == 0 && player1.getHand().getSize() == 0) {
+                System.out.println("Player 1 wins!");
+            } else {
+                System.out.println("Player 2 wins!");
+            }
 
-            //promptUserToPlay(player2);
             gameOver = true;
+
         }
     }
+
 
     public void promptUserToPlay(CardPlayer player) {
         String msg = String.format("Hey, %s what card number are you looking for?", player.getName());
@@ -44,33 +52,37 @@ public class GoFish extends CardGame {
         Hand hand = (player1.equals(player)) ? player2.getHand() : player1.getHand();
         Hand hand2 = (player1.equals(player)) ? player1.getHand() : player2.getHand();
 
-        if (hand.valueOfCardInHand(value1)) {
+            if (hand.valueOfCardInHand(value1)) {
 
-        } else {
-            System.out.println("Go fish");
-            hand.giveCardToHand(deck.takeCardFromDeck());
+                System.out.println("---------");
+                ArrayList<Card> matches = hand.getMatches(value1);
+                hand2.giveCardsToHand(matches);
+                System.out.println(hand.getSize());
+
+            } else {
+                System.out.println("Go fish");
+                hand.giveCardToHand(deck.takeCardFromDeck());
+            }
+
+
         }
 
 
-    }
+        public void deal () {
+            for (int x = 0; x < NUMBER_TO_DEAL; x++) {
+                Card card1 = deck.takeCardFromDeck();
+                player1.getHand().giveCardToHand(card1);
 
+                Card card2 = deck.takeCardFromDeck();
+                player2.getHand().giveCardToHand(card2);
+            }
+        }
 
-    public void deal() {
-        for (int x = 0; x < NUMBER_TO_DEAL; x++) {
-            Card card1 = deck.takeCardFromDeck();
-            player1.getHand().giveCardToHand(card1);
+        public CardPlayer getPlayer1 () {
+            return player1;
+        }
 
-            Card card2 = deck.takeCardFromDeck();
-            player2.getHand().giveCardToHand(card2);
+        public CardPlayer getPlayer2 () {
+            return player2;
         }
     }
-
-    public CardPlayer getPlayer1() {
-        return player1;
-    }
-
-    public CardPlayer getPlayer2() {
-        return player2;
-    }
-
-}
