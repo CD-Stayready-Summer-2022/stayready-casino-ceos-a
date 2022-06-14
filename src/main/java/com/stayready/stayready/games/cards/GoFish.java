@@ -42,9 +42,9 @@ public class GoFish extends CardGame {
         CardValue value1 = CardValue.values()[input1];
         System.out.println("You selected " + value1.name);
         Hand hand = (player1.equals(player)) ? player2.getHand() : player1.getHand();
+        Hand hand2 = (player1.equals(player)) ? player1.getHand() : player2.getHand();
 
         if (hand.valueOfCardInHand(value1)) {
-
 
         } else {
             System.out.println("Go fish");
