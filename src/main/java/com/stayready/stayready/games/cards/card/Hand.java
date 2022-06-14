@@ -26,11 +26,11 @@ public class Hand {
     public ArrayList<Card> getMatches(CardValue value) {
         ArrayList<Card> matches = new ArrayList<>();
 
-        for (Card card : cards) {
-            if (card.getValue().equals(value)) {
-                cards.remove(card);
+        for (int i=0;i<cards.size();i++) {
+            if (cards.get(i).getValue().equals(value)) {
+                cards.remove(i);
 
-                matches.add(card);
+                matches.add(cards.get(i));
             }
         }
         return matches;
