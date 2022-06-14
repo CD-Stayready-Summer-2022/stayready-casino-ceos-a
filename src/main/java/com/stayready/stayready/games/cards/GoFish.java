@@ -23,12 +23,20 @@ public class GoFish extends CardGame {
         deal();
         while (!gameOver) {
             promptUserToPlay(player1);
+            promptUserToPlay(player2);
+            if (deck.cardsRemaining() == 0 && player1.getHand().getSize() == 0){
+                System.out.println("Player 1 wins!");
+            }
 
-            //promptUserToPlay(player2);
+                else{
+                    System.out.println("Player 2 wins!");
+                }
 
-            gameOver = true;
+                gameOver = true;
+
+            }
         }
-    }
+
 
     public void promptUserToPlay(CardPlayer player) {
         String msg = String.format("Hey, %s what card number are you looking for?", player.getName());
