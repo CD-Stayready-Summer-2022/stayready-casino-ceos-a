@@ -1,9 +1,6 @@
 package com.stayready.stayready.games.cards;
 
-import com.stayready.stayready.games.cards.card.Card;
-import com.stayready.stayready.games.cards.card.CardGame;
-import com.stayready.stayready.games.cards.card.CardPlayer;
-import com.stayready.stayready.games.cards.card.Hand;
+import com.stayready.stayready.games.cards.card.*;
 
 import java.util.Scanner;
 
@@ -50,8 +47,13 @@ public class BlackJack extends CardGame {
     }
 
     private void promptUserToPlay(CardPlayer player1) {
-        String msg = String.format("Hey, %s?", player1.getName());
+        String msg = String.format("Hey, %s? do you want to hit, stand, or split?", player1.getName());
         System.out.println(msg);
+
+        Integer input1 = scanner.nextInt();
+        CardValue value1 = CardValue.values()[input1];
+        System.out.println("You selected " + value1.name);
+
 
     }
 
