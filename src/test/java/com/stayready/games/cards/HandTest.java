@@ -70,5 +70,16 @@ public class HandTest {
 
     }
 
+    @Test
+    @DisplayName("Get total value of hand test")
+    public void getTotalValueOfHandTest(){
+        Hand hand = new Hand();
+        Card card = new Card(CardValue.TWO, CardSuit.SPADE);
+        hand.giveCardToHand(card);
+        Integer expected = 2;
+        Integer actual = hand.getTotalValueOfHand();
+        Assertions.assertEquals(expected, actual);
+    }
+
 
 }
