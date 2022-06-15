@@ -3,6 +3,7 @@ package com.stayready.stayready.games.cards;
 
 
 import com.stayready.stayready.games.cards.card.CardPlayer;
+import com.stayready.stayready.games.cards.dice.Dice;
 
 import java.util.Scanner;
 
