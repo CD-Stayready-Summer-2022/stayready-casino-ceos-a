@@ -1,5 +1,6 @@
 package com.stayready.stayready.games.cards;
 
+
 import com.stayready.stayready.games.cards.card.Card;
 import com.stayready.stayready.games.cards.card.CardGame;
 import com.stayready.stayready.games.cards.card.CardPlayer;
@@ -75,4 +76,5 @@ public class BlackJack extends CardGame {
         }
 
     }
+
 
