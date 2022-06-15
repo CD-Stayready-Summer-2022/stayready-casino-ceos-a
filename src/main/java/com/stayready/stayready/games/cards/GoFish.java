@@ -3,6 +3,7 @@ package com.stayready.stayready.games.cards;
 import com.stayready.stayready.games.cards.card.*;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class GoFish extends CardGame {
@@ -25,14 +26,25 @@ public class GoFish extends CardGame {
             promptUserToPlay(player1);
             promptUserToPlay(player2);
             if (deck.cardsRemaining() == 0 && player1.getHand().getSize() == 0) {
-                System.out.println("Player 1 wins!");
-            } else {
-                System.out.println("Player 2 wins!");
+                gameOver = true;
+                System.out.println("Player 1 wins");
+            }
+            if (deck.cardsRemaining() == 0 && player2.getHand().getSize() == 0) {
+                gameOver = true;
+                System.out.println("Player 2 wins");
+            }
+            if (player1.getHand().getSize() == 0) {
+                gameOver = true;
+                System.out.println("Player one wins");
+            }
+            if (player2.getHand().getSize() == 0) {
+                gameOver = true;
+                System.out.println("Player two wins");
             }
 
-            gameOver = true;
-
         }
+
+
     }
 
 
@@ -47,42 +59,44 @@ public class GoFish extends CardGame {
             x++;
         }
         Integer input1 = scanner.nextInt();
-        CardValue value1 = CardValue.values()[input1];
+        CardValue value1= CardValue.values()[input1];
         System.out.println("You selected " + value1.name);
+
+        System.out.println("Try again value is not available");
+
         Hand hand = (player1.equals(player)) ? player2.getHand() : player1.getHand();
         Hand hand2 = (player1.equals(player)) ? player1.getHand() : player2.getHand();
 
-            if (hand.valueOfCardInHand(value1)) {
-
-                System.out.println("---------");
-                ArrayList<Card> matches = hand.getMatches(value1);
-                hand2.giveCardsToHand(matches);
-                System.out.println(hand.getSize());
-
-            } else {
-                System.out.println("Go fish");
-                hand.giveCardToHand(deck.takeCardFromDeck());
-            }
+        if (hand.valueOfCardInHand(value1)) {
+            System.out.println("Yes I have that card ");
+            ArrayList<Card> matches = hand.getMatches(value1);
+            hand2.giveCardsToHand(matches);
 
 
+        } else {
+            System.out.println("Go fish");
+            hand.giveCardToHand(deck.takeCardFromDeck());
         }
 
 
-        public void deal () {
-            for (int x = 0; x < NUMBER_TO_DEAL; x++) {
-                Card card1 = deck.takeCardFromDeck();
-                player1.getHand().giveCardToHand(card1);
+    }
 
-                Card card2 = deck.takeCardFromDeck();
-                player2.getHand().giveCardToHand(card2);
-            }
-        }
 
-        public CardPlayer getPlayer1 () {
-            return player1;
-        }
+    public void deal() {
+        for (int x = 0; x < NUMBER_TO_DEAL; x++) {
+            Card card1 = deck.takeCardFromDeck();
+            player1.getHand().giveCardToHand(card1);
 
-        public CardPlayer getPlayer2 () {
-            return player2;
+            Card card2 = deck.takeCardFromDeck();
+            player2.getHand().giveCardToHand(card2);
         }
     }
+
+    public CardPlayer getPlayer1() {
+        return player1;
+    }
+
+    public CardPlayer getPlayer2() {
+        return player2;
+    }
+}
