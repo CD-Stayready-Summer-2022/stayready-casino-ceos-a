@@ -1,4 +1,4 @@
-package com.stayready.games;
+package com.stayready.games.cards;
 
 import com.stayready.stayready.games.cards.deck.Deck;
 import org.junit.jupiter.api.Assertions;

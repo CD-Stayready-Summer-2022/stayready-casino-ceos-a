@@ -1,4 +1,4 @@
-package com.stayready.games;
+package com.stayready.games.cards;
 
 import com.stayready.stayready.games.cards.card.Card;
 import com.stayready.stayready.games.cards.card.CardSuit;

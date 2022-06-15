@@ -1,4 +1,4 @@
-package com.stayready.games;
+package com.stayready.games.cards;
 
 import com.stayready.stayready.games.cards.card.Card;
 import com.stayready.stayready.games.cards.card.CardSuit;
@@ -15,7 +15,7 @@ public class HandTest {
     @Test
     @DisplayName("value of hand test")
 
-    public void constructerTest() {
+    public void constructorTest() {
         Hand hand = new Hand();
         Assertions.assertNotNull(hand);
     }
