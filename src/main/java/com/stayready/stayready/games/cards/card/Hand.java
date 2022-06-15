@@ -26,7 +26,7 @@ public class Hand {
     public ArrayList<Card> getMatches(CardValue value) {
         ArrayList<Card> matches = new ArrayList<>();
 
-        for (int i= 0;i<cards.size();i++) {
+        for (int i = 0; i < cards.size(); i++) {
             if (cards.get(i).getValue().equals(value)) {
                 cards.remove(i);
                 matches.add(cards.get(i));
@@ -75,9 +75,15 @@ public class Hand {
         cards.remove(indexOfCard);
         return cardRemoved;
     }
-    public Integer getSize(){
 
-       return cards.size();
+    public Integer getSize() {
+
+        return cards.size();
     }
+
+
+
+
+
 }
 
