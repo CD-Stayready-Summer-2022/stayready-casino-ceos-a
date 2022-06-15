@@ -3,6 +3,7 @@ package com.stayready.stayready.games.cards;
 import com.stayready.stayready.games.cards.card.*;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class GoFish extends CardGame {
@@ -58,8 +59,11 @@ public class GoFish extends CardGame {
             x++;
         }
         Integer input1 = scanner.nextInt();
-        CardValue value1 = CardValue.values()[input1];
+        CardValue value1= CardValue.values()[input1];
         System.out.println("You selected " + value1.name);
+
+        System.out.println("Try again value is not available");
+
         Hand hand = (player1.equals(player)) ? player2.getHand() : player1.getHand();
         Hand hand2 = (player1.equals(player)) ? player1.getHand() : player2.getHand();
 
