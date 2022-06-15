@@ -23,6 +23,14 @@ public class Hand {
         return false;
     }
 
+    public Integer getTotalValueOfHand() {
+        Integer totalValue = 0;
+        for (Card card : cards) {
+            totalValue += card.getValue().value;
+        }
+        return totalValue;
+    }
+
     public ArrayList<Card> getMatches(CardValue value) {
         ArrayList<Card> matches = new ArrayList<>();
 
