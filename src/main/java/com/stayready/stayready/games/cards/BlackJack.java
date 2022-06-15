@@ -2,6 +2,7 @@ package com.stayready.stayready.games.cards;
 
 import com.stayready.stayready.games.cards.card.*;
 
+
 import java.util.Scanner;
 
 public class BlackJack extends CardGame {
@@ -77,4 +78,5 @@ public class BlackJack extends CardGame {
         }
 
     }
+
 
